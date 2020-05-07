@@ -1,0 +1,20 @@
+2020-05-07T12:03:30+00:00 CRITICAL Uncaught Requests_Exception: cURL error 6: Could not resolve host: api.razorpay.com in C:\wamp64\www\Atmos\wp-includes\Requests\Transport\cURL.php:422
+Stack trace:
+#0 C:\wamp64\www\Atmos\wp-includes\Requests\Transport\cURL.php(177): Requests_Transport_cURL->process_response('', Array)
+#1 C:\wamp64\www\Atmos\wp-includes\class-requests.php(379): Requests_Transport_cURL->request('https://api.raz...', Array, Array, Array)
+#2 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\razorpay-sdk\src\Request.php(42): Requests::request('https://api.raz...', Array, Array, 'GET', Array)
+#3 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\woo-razorpay.php(636): Razorpay\Api\Request->request('GET', 'https://api.raz...')
+#4 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\woo-razorpay.php(398): WC_Razorpay->generateOrderForm(Array)
+#5 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\woo-razorpay.php(269): WC_Razorpay->generate_razorpay_form(238)
+#6 C:\wamp64\www\Atmos\wp-includes\class-wp-hook.php(287): WC_Razorpay->r in C:\wamp64\www\Atmos\wp-includes\Requests\Transport\cURL.php on line 422
+
+2020-05-07T12:03:37+00:00 CRITICAL Uncaught Requests_Exception: cURL error 6: Could not resolve host: api.razorpay.com in C:\wamp64\www\Atmos\wp-includes\Requests\Transport\cURL.php:422
+Stack trace:
+#0 C:\wamp64\www\Atmos\wp-includes\Requests\Transport\cURL.php(177): Requests_Transport_cURL->process_response('', Array)
+#1 C:\wamp64\www\Atmos\wp-includes\class-requests.php(379): Requests_Transport_cURL->request('https://api.raz...', Array, Array, Array)
+#2 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\razorpay-sdk\src\Request.php(42): Requests::request('https://api.raz...', Array, Array, 'GET', Array)
+#3 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\woo-razorpay.php(636): Razorpay\Api\Request->request('GET', 'https://api.raz...')
+#4 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\woo-razorpay.php(398): WC_Razorpay->generateOrderForm(Array)
+#5 C:\wamp64\www\Atmos\wp-content\plugins\woo-razorpay\woo-razorpay.php(269): WC_Razorpay->generate_razorpay_form(238)
+#6 C:\wamp64\www\Atmos\wp-includes\class-wp-hook.php(287): WC_Razorpay->r in C:\wamp64\www\Atmos\wp-includes\Requests\Transport\cURL.php on line 422
+
