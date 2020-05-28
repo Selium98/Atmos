@@ -985,3 +985,25 @@ if ( ! function_exists( 'owp_fs' ) ) {
 #endregion
 
 new OCEANWP_Theme_Class;
+add_action( 'register_form', 'wedevs_registration_form' );
+function wedevs_registration_form() {
+	?>
+	<p>
+		<label for="user_phone">
+			<?php esc_html_e( 'Enter Your Phone', 'user_phone' ) ?> <br/>
+			<input type="text" class="regular_text" name="user_phone" />
+		</label>
+	</p>
+	
+	<?php
+}
+
+add_action( 'user_register', 'wedevs_save_data' );
+
+function wedevs_save_data( $user_id ) {
+	if ( ! empty( $_POST['user_phone'] ) ) {
+		update_user_meta( $user_id, 'user_phone', trim( $_POST['user_phone'] ) ) ;		
+	}
+
+	
+}
