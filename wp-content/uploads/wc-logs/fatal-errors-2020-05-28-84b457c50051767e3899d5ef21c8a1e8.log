@@ -1,0 +1,4 @@
+2020-05-28T10:04:25+00:00 CRITICAL Cannot redeclare wedevs_registration_form() (previously declared in C:\wamp64\www\Atmogit\wp-login.php:1520) in C:\wamp64\www\Atmogit\wp-content\themes\oceanwp\functions.php on line 999
+
+2020-05-28T10:04:26+00:00 CRITICAL Cannot redeclare wedevs_registration_form() (previously declared in C:\wamp64\www\Atmogit\wp-login.php:1520) in C:\wamp64\www\Atmogit\wp-content\themes\oceanwp\functions.php on line 999
+
