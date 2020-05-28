@@ -1021,6 +1021,11 @@ switch ( $action ) {
 
 			?>
 		</p>
+
+
+
+
+
 		<?php
 
 		login_footer( 'user_pass' );
@@ -1046,6 +1051,7 @@ switch ( $action ) {
 
 		$user_login = '';
 		$user_email = '';
+		/* $user_phone = ''; */
 
 		if ( $http_post ) {
 			if ( isset( $_POST['user_login'] ) && is_string( $_POST['user_login'] ) ) {
@@ -1056,7 +1062,13 @@ switch ( $action ) {
 				$user_email = wp_unslash( $_POST['user_email'] );
 			}
 
-			$errors = register_new_user( $user_login, $user_email );
+			
+
+/* if ( isset( $_POST['user_phone'] ) && is_string( $_POST['user_phone'] ) ) {
+				$user_phone = wp_unslash( $_POST['user_phone'] );
+			} */
+
+			$errors = register_new_user( $user_login, $user_email, $user_phone );
 
 			if ( ! is_wp_error( $errors ) ) {
 				$redirect_to = ! empty( $_POST['redirect_to'] ) ? $_POST['redirect_to'] : 'wp-login.php?checkemail=registered';
@@ -1088,6 +1100,11 @@ switch ( $action ) {
 				<label for="user_email"><?php _e( 'Email' ); ?></label>
 				<input type="email" name="user_email" id="user_email" class="input" value="<?php echo esc_attr( wp_unslash( $user_email ) ); ?>" size="25" />
 			</p>
+
+			/*<p>
+				<label for="user_phone"><?php _e( 'Phone Number' ); ?></label>
+				<input type="number" name="user_phone" id="user_phone" class="input" value="<?php echo esc_attr( wp_unslash( $user_phone ) ); ?>" size="25" />
+			</p>*/
 			<?php
 
 			/**
@@ -1499,3 +1516,4 @@ switch ( $action ) {
 		login_footer();
 		break;
 } // End action switch.
+
